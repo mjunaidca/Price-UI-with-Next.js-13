@@ -6,9 +6,9 @@ import React from 'react'
 
 const TickCheck = ({children}:{children:React.ReactNode}) => {
   return (
-    <HStack direction={['column', 'row']}  pt='10px' pl='68px' >
+    <HStack direction={['column', 'row']}  pt='3' pl='12' >
       <Icon as={CheckBox} />
-      <Text pl='14px' >{children}</Text>
+      <Text pl='3' textAlign={['left', 'left', 'left']} >{children}</Text>
     </HStack>
   )
 }
@@ -16,23 +16,28 @@ const TickCheck = ({children}:{children:React.ReactNode}) => {
 export default function Pricing() {
     
   return (
-    <Box width='50%'
-          ml='25%'
-          mt='-8%'
+    <Box mx='6' mt='-40'>
+    <Box 
+          maxW='994px' 
+          margin='auto'
           borderRadius='12px'
-          bg='#FFFFFF' boxShadow= '0px 20px 25px -5px rgba(0, 0, 0, 0.1), 0px 10px 10px -5px rgba(0, 0, 0, 0.04)'>
-        <Flex direction='row'>
-        <Box bg='purple.50' textAlign='center' width='378px' height='326px' p='60px'>
-            <Text fontWeight='800' fontSize='24px' >Premium PRO</Text>
-            <Heading as='h3' fontWeight='800' fontSize='60px' >$329</Heading>
-            <Text mt='8px' fontWeight='500' fontSize='18px' >billed just once</Text>
-            <Button mt='10px' colorScheme='purple' size='md' width='282px' height='51px'>
+          overflow='hidden'
+          boxShadow= '0px 20px 25px -5px rgba(0, 0, 0, 0.1), 0px 10px 10px -5px rgba(0, 0, 0, 0.04)'>
+
+        <Flex direction={["column", "column", "row"]}>
+
+        <Box bg='purple.50' textAlign='center' p='60px'>
+
+            <Text fontWeight='bold' fontSize='xl' >Premium PRO</Text>
+            <Heading as='h2' fontWeight='bold' fontSize={['5xl','5xl','6xl' ]} >$329</Heading>
+            <Text mt='2' fontWeight='medium' fontSize='18px' >billed just once</Text>
+            <Button mt='3' colorScheme='purple' size='lg' width='282px' height='51px'>
                 Get Started
                 </Button>
         </Box>
-        <Box textAlign='left' width='auto' height='auto' >
+        <Box bg='white' textAlign='left' p='60px'>
         <Stack as='ul'>
-          <Text fontWeight='400' pt='60px' pl='64px'>Access these features when you get this pricing package for your business.</Text>
+          <Text fontWeight='normal' pt='6' pl='12'>Access these features when you get this pricing package for your business.</Text>
           <TickCheck>International calling and messaging API</TickCheck>
           <TickCheck>Additional phone numbers</TickCheck>
           <TickCheck>Automated messages via Zapier</TickCheck>
@@ -41,6 +46,7 @@ export default function Pricing() {
         </Box>
         </Flex>
 
+        </Box>
         </Box>
    
   )
