@@ -6,7 +6,7 @@ import React from 'react'
 
 const TickCheck = ({children}:{children:React.ReactNode}) => {
   return (
-    <HStack direction={['column', 'row']}  pt='3' pl='12' >
+    <HStack direction={['column', 'row']}  pt='2' pl='auto' >
       <Icon as={CheckBox} />
       <Text pl='3' textAlign={['left', 'left', 'left']} >{children}</Text>
     </HStack>
@@ -37,7 +37,7 @@ export default function Pricing() {
         </Box>
         <Box bg='white' textAlign='left' p='60px'>
         <Stack as='ul'>
-          <Text fontWeight='normal' pt='6' pl='12'>Access these features when you get this pricing package for your business.</Text>
+          <Text fontWeight='normal' pl='auto'>Access these features when you get this pricing package for your business.</Text>
           <TickCheck>International calling and messaging API</TickCheck>
           <TickCheck>Additional phone numbers</TickCheck>
           <TickCheck>Automated messages via Zapier</TickCheck>
